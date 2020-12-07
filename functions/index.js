@@ -128,11 +128,11 @@ const runtimeOptions = {
   memory: '256MB',
 };
 
-exports.weeklySeedBuy = functions
+exports.dailyCheckRecipePublishDate = functions
   .runWith(runtimeOptions)
   .pubsub.schedule('0 8 * * 0') // At 08:00 on Sunday.
   .onRun(async () => {
-    console.log('weeklySeedBuy() called');
+    console.log('dailyCheckRecipePublishDate() called');
 
     const snapshot = await firestore
       .collection('recipes')
