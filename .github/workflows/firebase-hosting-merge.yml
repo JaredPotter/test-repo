@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm install
+      - run: yarn install
       - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
@@ -33,7 +33,7 @@ jobs:
           node-version: 12
       - name: 📥 Download deps
         working-directory: functions
-        run: npm install
+        run: yarn install
       - name: 🚀 Deploy
         run: npx firebase-tools deploy --token "$FIREBASE_TOKEN" --only functions
         env:
