@@ -1,6 +1,7 @@
 const recipesApiApp = require('./recipes-api');
 const firebaseConfig = require('./FirebaseConfig');
-const functions = firebaseConfig.functions;
+// const functions = firebaseConfig.functions;
+const functions = require('firebase-functions');
 const firestore = firebaseConfig.firestore;
 const storageBucket = firebaseConfig.storageBucket;
 const admin = firebaseConfig.admin;
