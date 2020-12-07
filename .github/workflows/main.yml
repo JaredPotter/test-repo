@@ -18,6 +18,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
       # Runs a single command using the runners shell
       # And of course we need to goto our functions folder to deploy
       - name: Install npm packages
